@@ -38,7 +38,7 @@ bool isBig(const string& str, string& out, int iStr, int iOut)
     if(str[iStr] > out[iOut])
         return true;
     else if(str[iStr] == out[iOut])
-        return isSmall(str, out, iStr+1, iOut+1);
+        return isBig(str, out, iStr+1, iOut+1);
     else
         return false;
 }
@@ -62,8 +62,8 @@ string getLarge(const string& str, int k)
 
 int main()
 {
-    string str = "welcometojava";
-    int k = 3;
+    string str = "vinitasahuninivinivixvixvaxyzz";
+    int k =6;
     string small = getSmall(str, k);
     string large = getLarge(str, k);
     cout << "lexicographic substring with size " << k << endl;
